@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int time;
         System.out.print("Введите сумму вклада: ");
         int vklad = scan.nextInt();
         System.out.print("Введите годовой процент: ");
