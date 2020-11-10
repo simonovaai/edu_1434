@@ -1,26 +1,27 @@
-/*Вывести на экран все возможные комбинации слов "Мама", "Мыла", "Раму".
-Подсказка: их 6 штук.
-Каждую комбинацию вывести с новой строки. Слова не разделять.
-Пример:
-МылаРамуМама
-РамуМамаМыла
-...
-Требования:
-•	Программа должна выводить текст.
-•	Выведенный текст должен содержать 6 строк.
-•	Текст в каждой строке должен быть уникален.
-•	Должны быть выведены все возможные комбинации. */
-
 public class Main {
     public static void main(String[] args) {
-        String a = "Мама";
-        String b = "Мыла";
-        String c = "Раму";
-        System.out.println(a+b+c);
-        System.out.println(a+c+b);
-        System.out.println(b+a+c);
-        System.out.println(b+c+a);
-        System.out.println(c+a+b);
-        System.out.println(c+b+a);
+        String[] arr = {"Мама", "Мыла", "Раму"};
+            int counter;
+            int time;
+            String a;
+            String b;
+            for (int i=0;i<3;i++) {
+                counter = 0;
+                do {
+                    a = b = arr[i];
+                    time=0;
+                    for (int j = 0; j < 3; j++) {
+                        if (i != j) {
+                            a = a + arr[j];
+                                for (int k = 0; k < 3; k++) {
+                                    if (i != k && j != k) b = b + arr[k];
+                           }
+                        }
+                    }
+                    System.out.println(a+" ");
+                    System.out.println(b+" ");
+                    counter++;
+                } while (counter == arr.length);
+            }
+        }
     }
-}
