@@ -22,7 +22,7 @@ public class Main {
         System.out.println("У меня две бабушки, бабушка: "
                 +gosha.getMother().getMother().getName()
                 +" и "+gosha.getFather().getMother().getName());
-        System.out.println("У меня две бабушки, бабушка: "
+        System.out.println("У меня два деда, деда: "
                 +gosha.getMother().getFather().getName()
                 +" и "+gosha.getFather().getFather().getName());
     }
